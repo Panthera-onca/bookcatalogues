@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <body>
+        <form action="#" th:action="@{/}" th:object="${livreForm}" method="post">
+            <table>
+                <tr>
+                    <td>titre:</td>
+                    <td><input type="text" th:field="*{titre}" /></td>
+                    <td th:if="${#fields.hasErrors('titre')}" th:errors="*{titre}">titre Error</td>
+                </tr>
+                <tr>
+                    <td>refeni:</td>
+                    <td><input type="text" th:field="*{refeni}" /></td>
+                    <td th:if="${#fields.hasErrors('refeni')}" th:errors="*{titre}">refeni Error</td>
+                </tr>
+                <tr>
+                    <td>auteur:</td>
+                    <td><input type="text" th:field="*{auteur}" /></td>
+                    <td th:if="${#fields.hasErrors('auteur')}" th:errors="*{auteur}">auteur Error</td>
+                </tr>
+                <tr>
+                    <td>isbn:</td>
+                    <td><input type="text" th:field="*{isbn}" /></td>
+                    <td th:if="${#fields.hasErrors('isbn')}" th:errors="*{isbn}">isbn Error</td>
+                </tr>
+                <tr>
+                    <td>disponibilité:</td>
+                    <td><input type="text" th:field="*{disponibilité}" /></td>
+                    <td th:if="${#fields.hasErrors('disponibilité')}" th:errors="*{disponibilité}">disponibilité Error</td>
+                </tr>
+                <tr>
+                    <td>genre:</td>
+                    <td><input type="text" th:field="*{genre}" /></td>
+                    <td th:if="${#fields.hasErrors('genre')}" th:errors="*{genre}">genre Error</td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Submit</button></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
